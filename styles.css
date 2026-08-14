@@ -81,11 +81,15 @@ header {
     object-fit: cover;    
     border-radius: 50%;   
     flex-shrink: 0;       
-
+}
 .about-text {
     flex: 1; 
 }
 
+#text-em {
+    font-size: 2rem;
+ margin-bottom: var(--spacing-sm); 
+}
 @media (min-width: 640px) {
     .about-content {
         flex-direction: row; 
