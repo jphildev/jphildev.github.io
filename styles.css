@@ -1,16 +1,11 @@
-/* ---------------------------------------
-   1. RESET — remove browser inconsistencies
---------------------------------------- */
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* ---------------------------------------
-   2. CUSTOM PROPERTIES — one source of truth
-   Change these and the whole site updates
---------------------------------------- */
+
 :root {
     --color-bg: #ffffff;
     --color-bg-alt: #f5f6fa;
@@ -25,9 +20,7 @@
     --max-width: 900px;
 }
 
-/* ---------------------------------------
-   3. BASE ELEMENT STYLES
---------------------------------------- */
+
 body {
     font-family: var(--font-main);
     color: var(--color-text);
@@ -41,7 +34,7 @@ h2 {
 }
 
 p {
-    max-width: 65ch; /* readable line length */
+    max-width: 65ch; 
 }
 
 a {
@@ -54,9 +47,7 @@ a:focus {
     text-decoration: underline;
 }
 
-/* ---------------------------------------
-   4. HEADER / NAV — flexbox for 1D layout
---------------------------------------- */
+
 header {
     display: flex;
     flex-wrap: wrap;
@@ -75,12 +66,10 @@ header {
     font-size: 1.25rem;
 }
 
-/* ---------------------------------------
-   ABOUT SECTION — image beside text
---------------------------------------- */
+
 .about-content {
     display: flex;
-    flex-direction: column; /* stacked on small screens (mobile-first) */
+    flex-direction: column; 
     align-items: center;
     gap: var(--spacing-lg);
     text-align: center;
@@ -89,18 +78,17 @@ header {
 #logo-image {
     width: 220px;
     height: 220px;
-    object-fit: cover;     /* crops instead of stretching/distorting */
-    border-radius: 50%;    /* circular headshot, remove if you want square */
-    flex-shrink: 0;        /* keeps the image from shrinking when text is long */
-}
+    object-fit: cover;    
+    border-radius: 50%;   
+    flex-shrink: 0;       
 
 .about-text {
-    flex: 1; /* text takes remaining space next to the image */
+    flex: 1; 
 }
 
 @media (min-width: 640px) {
     .about-content {
-        flex-direction: row;   /* side-by-side once screen is wide enough */
+        flex-direction: row; 
         align-items: center;
         text-align: left;
     }
@@ -121,25 +109,19 @@ header nav a.active {
     color: var(--color-primary);
 }
 
-/* ---------------------------------------
-   5. SECTIONS — consistent rhythm/spacing
---------------------------------------- */
+
 section {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: var(--spacing-xl) var(--spacing-lg);
-    scroll-margin-top: 80px; /* offset for sticky header when jumping via #links */
+    scroll-margin-top: 80px; 
 }
 
 section:nth-of-type(even) {
     background: var(--color-bg-alt);
 }
 
-/* ---------------------------------------
-   6. MOBILE-FIRST RESPONSIVE BREAKPOINT
-   Base styles above are for small screens.
-   This adds/adjusts layout for larger ones.
---------------------------------------- */
+
 @media (min-width: 640px) {
     section {
         padding: var(--spacing-xl) var(--spacing-lg);
