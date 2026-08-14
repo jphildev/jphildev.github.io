@@ -6,9 +6,10 @@
 
 
 :root {
-    --color-bg: #f3e1bd;
-    --color-bg-alt: #fbfaf6;
-    --color-text: hsl(0, 0%, 12%);
+    --color-bg: #ffd03586;
+    --color-bg-alt: #fbf9ff;
+    --color-text: hsl(222, 84%, 15%);
+    --color-text-description: hsla(197, 58%, 8%, 0.979);
     --color-primary: #5f5f5dfc;
     --color-primary-dark: #1d4fbf;
     --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
@@ -26,8 +27,14 @@
 body {
     font-family: var(--font-main);
     color: var(--color-text);
-    background: var(--color-bg);
     line-height: 1.6;
+    background-image:
+        linear-gradient(rgb(255, 253, 249), rgba(0, 0, 0, 0)),
+        url("sunset-bg.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h2 {
@@ -101,6 +108,11 @@ header {
     max-width: 16ch;
  margin-bottom: var(--spacing-sm); 
 }
+
+
+#text-description {
+  text-align: justify;
+}
 @media (min-width: 640px) {
     .about-content {
         flex-direction: row; 
@@ -133,8 +145,11 @@ section {
 }
 
 section:nth-of-type(even) {
-    background: var(--color-bg-alt);
-    border-radius: 7px 7px 7px 7px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid gray;
+    border-radius: 8px;
+   ;
 }
 
 .contact-info {
