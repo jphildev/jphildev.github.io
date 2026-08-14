@@ -1,6 +1,151 @@
-.logo {
-font-weight: 700;
-font-size: 18px;
-color: var(--color-text);
+/* ---------------------------------------
+   1. RESET — remove browser inconsistencies
+--------------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+/* ---------------------------------------
+   2. CUSTOM PROPERTIES — one source of truth
+   Change these and the whole site updates
+--------------------------------------- */
+:root {
+    --color-bg: #ffffff;
+    --color-bg-alt: #f5f6fa;
+    --color-text: #1e1e1e;
+    --color-primary: #2f6fed;
+    --color-primary-dark: #1d4fbf;
+    --font-main: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+    --max-width: 900px;
+}
+
+/* ---------------------------------------
+   3. BASE ELEMENT STYLES
+--------------------------------------- */
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+}
+
+p {
+    max-width: 65ch; /* readable line length */
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* ---------------------------------------
+   4. HEADER / NAV — flexbox for 1D layout
+--------------------------------------- */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--color-bg-alt);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* ---------------------------------------
+   ABOUT SECTION — image beside text
+--------------------------------------- */
+.about-content {
+    display: flex;
+    flex-direction: column; /* stacked on small screens (mobile-first) */
+    align-items: center;
+    gap: var(--spacing-lg);
+    text-align: center;
+}
+
+#logo-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;     /* crops instead of stretching/distorting */
+    border-radius: 50%;    /* circular headshot, remove if you want square */
+    flex-shrink: 0;        /* keeps the image from shrinking when text is long */
+}
+
+.about-text {
+    flex: 1; /* text takes remaining space next to the image */
+}
+
+@media (min-width: 640px) {
+    .about-content {
+        flex-direction: row;   /* side-by-side once screen is wide enough */
+        align-items: center;
+        text-align: left;
+    }
+}
+
+header nav ul {
+    display: flex;
+    gap: var(--spacing-lg);
+    list-style: none;
+}
+
+header nav a {
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+header nav a.active {
+    color: var(--color-primary);
+}
+
+/* ---------------------------------------
+   5. SECTIONS — consistent rhythm/spacing
+--------------------------------------- */
+section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    scroll-margin-top: 80px; /* offset for sticky header when jumping via #links */
+}
+
+section:nth-of-type(even) {
+    background: var(--color-bg-alt);
+}
+
+/* ---------------------------------------
+   6. MOBILE-FIRST RESPONSIVE BREAKPOINT
+   Base styles above are for small screens.
+   This adds/adjusts layout for larger ones.
+--------------------------------------- */
+@media (min-width: 640px) {
+    section {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
 }
