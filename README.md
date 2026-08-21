@@ -28,4 +28,4 @@
 <h2>Author</h2>
 
 <h2>John Philip De Villa</h2>
-GitHub: [@jphildev](https://github.com/jphildev)
+GitHub: @jphildev | https://github.com/jphildev
