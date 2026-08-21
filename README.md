@@ -1,6 +1,6 @@
 <h1>jphildev.github.io</h1>
 
-<p>My personal web portfolio, built with HTML and CSS. Live at [jphildev.github.io](https://jphildev.github.io/).
+<p>My personal web portfolio, built with HTML and CSS. Live @ jphildev.github.io | https://jphildev.github.io.
 </p>
 <h2>About</h2> 
 
