@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Projects — JP De Villa | TransitPH, SRA Student Progress Tracker</title>
+    <meta name="description" content="A selection of JP De Villa's projects, including TransitPH, a commuter transit guide, and the SRA Student Progress Tracker built with Next.js and Postgres.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jpdevilla.example.com/projects.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects — JP De Villa">
+    <meta property="og:description" content="A selection of JP De Villa's projects, including TransitPH, a commuter transit guide, and the SRA Student Progress Tracker built with Next.js and Postgres.">
+    <meta property="og:url" content="https://jpdevilla.example.com/projects.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.15.1/devicon.min.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "CreativeWork",
+                "position": 1,
+                "name": "TransitPH",
+                "description": "A transportation guide for commuters to map, analyze, and price start-and-end points, showing available services and recommended prices."
+            },
+            {
+                "@type": "CreativeWork",
+                "position": 2,
+                "name": "SRA Student Progress Tracker",
+                "description": "Mobile-first Next.js 14 app for tracking SRA color-level reading progress, with email/password auth and Postgres-backed per-user reports."
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <h1 id="logo">JP De Villa</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+                <li><a href="languages.html">Languages</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="projects" class="card-section" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <ul id="project-list">
+                <li class="project-card">
+                    <h3 id="project-transitph">TransitPH</h3>
+                    <p>A Transportation guide for commuters to map, analyze and price start-and-end points to show available services and its recommended prices.</p>
+                    <div class="project-tags">
+                        <span>Collaborator</span>
+                        <span>Front-End</span>
+                    </div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View TransitPH project">View Project →</a>
+                </li>
+                <li class="project-card">
+                    <h3 id="project-sra">SRA Student Progress Tracker</h3>
+                    <p>Mobile-first Next.js 14 app for tracking SRA color-level reading progress. Email/password auth, Postgres-backed per-user reports, deployable to Vercel's free tier.</p>
+                    <div class="project-tags">
+                        <span>Project Manager</span>
+                        <span>Front-End</span>
+                    </div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View SRA Student Progress Tracker project">View Project →</a>
+                </li>
+
+                
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
