@@ -162,7 +162,7 @@ section {
 #text-em {
     font-family: var(--font-display);
     font-weight: 400;
-    font-size: clamp(2.6rem, 3.2vw, 2.2rem);
+    font-size: clamp(2.7rem, 30vw, 3.7rem);
     line-height: 1.12;
     letter-spacing: -0.02em;
     max-width: 16ch;
